@@ -1,7 +1,7 @@
 package MapBuilder.utils;
 
-import static MapBuilder.gui.GridPanel.GRID_HEIGHT;
-import static MapBuilder.gui.GridPanel.GRID_WIDTH;
+import static MapBuilder.GameSettings.GRID_HEIGHT;
+import static MapBuilder.GameSettings.GRID_WIDTH;
 import static java.lang.Math.abs;
 
 
