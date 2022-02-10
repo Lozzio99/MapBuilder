@@ -1,6 +1,7 @@
 package MapBuilder.gui;
 
 
+import MapBuilder.GameSettings;
 import MapBuilder.utils.IVector;
 import MapBuilder.utils.Section;
 import MapBuilder.utils.Vector2D;
@@ -12,27 +13,25 @@ import java.util.Map;
 
 import static MapBuilder.enums.ElementType.fromCode;
 import static MapBuilder.gui.HelperPanel.DRAWING_CODE;
-
+import static MapBuilder.GameSettings.*;
 
 public class GridPanel extends JPanel
 {
 
     protected Map<IVector, Section> sections;
-    public static int WIDTH,GRID_WIDTH,HEIGHT,GRID_HEIGHT;
-    public static double scaling;
-    public static int rows,columns;
+
     static {
-        WIDTH =(1200);
-        HEIGHT = (800);
-        GRID_WIDTH = GRID_HEIGHT = 10;
-        scaling =  1./GRID_WIDTH;
-        rows = HEIGHT / GRID_HEIGHT;
-        columns = WIDTH / GRID_WIDTH;
+        GameSettings.MAP_WIDTH =(1200);
+        GameSettings.MAP_HEIGHT = (800);
+        GameSettings.GRID_WIDTH = GameSettings.GRID_HEIGHT = 10;
+        GameSettings.scaling =  1./GameSettings.GRID_WIDTH;
+        GameSettings.rows = GameSettings.MAP_HEIGHT / GameSettings.GRID_HEIGHT;
+        GameSettings.columns = GameSettings.MAP_WIDTH / GameSettings.GRID_WIDTH;
     }
 
     public GridPanel() {
         super();
-        Dimension d = new Dimension(WIDTH,HEIGHT);
+        Dimension d = new Dimension(GameSettings.MAP_WIDTH,GameSettings.MAP_HEIGHT);
         setPreferredSize(d);
         setMaximumSize(d);
         setBackground(Color.WHITE);
@@ -100,9 +99,9 @@ public class GridPanel extends JPanel
             int x = i*GRID_WIDTH;
             for (int j = 0; j<= rows; j++){
                 int y = j*GRID_HEIGHT;
-                g.drawLine(0, y, WIDTH, y);
+                g.drawLine(0, y, MAP_WIDTH, y);
             }
-            g.drawLine(x, 0,x, HEIGHT);
+            g.drawLine(x, 0,x, MAP_HEIGHT);
         }
     }
 

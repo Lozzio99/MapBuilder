@@ -304,8 +304,8 @@ public class HelperPanel extends JPanel {
             PrintWriter pw = new PrintWriter(file);
             pw.println("name = Map "+MAP_FILE_INDEX);
             pw.println("gameMode = "+ GameSettings.GAME_MODE.getCode());
-            pw.println("height = "+ (int)(HEIGHT*scaling));
-            pw.println("width = "+ (int)(WIDTH*scaling));
+            pw.println("height = "+ (int)(MAP_HEIGHT*scaling));
+            pw.println("width = "+ (int)(MAP_WIDTH*scaling));
             pw.println("scaling = "+(1./GRID_WIDTH));
             pw.println("numGuards = "+NUM_GUARDS);
             pw.println("numIntruders = "+NUM_INTRUDERS);

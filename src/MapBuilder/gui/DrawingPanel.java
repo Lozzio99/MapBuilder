@@ -9,6 +9,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import static MapBuilder.GameSettings.GRID_HEIGHT;
+import static MapBuilder.GameSettings.GRID_WIDTH;
 import static MapBuilder.gui.HelperPanel.DRAWING_CODE;
 public class DrawingPanel extends GridPanel implements MouseMotionListener, MouseListener {
 

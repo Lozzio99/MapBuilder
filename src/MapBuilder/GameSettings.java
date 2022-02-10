@@ -6,7 +6,11 @@ import java.io.File;
 
 public class GameSettings {
 
+    public static int MAP_WIDTH,GRID_WIDTH, MAP_HEIGHT,GRID_HEIGHT;
+    public static double scaling;
+    public static int rows,columns;
     public static String MAP_FILE = "";
+
     static {
         System.out.println(new File(MAP_FILE));
     }
